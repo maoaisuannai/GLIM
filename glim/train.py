@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 
-def fit_transform(features, adj, save_path, n_hid=512, device='cpu', print_log=True, patience=20, n_epoch=300, tmp_path='best_dgi.pkl'):
+def fit_transform(features, adj, save_path, n_hid=512, device='cuda', print_log=True, patience=20, n_epoch=300, tmp_path='best_dgi.pkl'):
     device = torch.device(device)
     
     # Self loop is required.
